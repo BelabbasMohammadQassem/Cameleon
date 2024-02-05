@@ -7,6 +7,16 @@ body {
     margin: auto;
 }
 
+nav{
+    position: relative;
+    top: 10px;
+}
+
+a {
+    font-family: 'Open Sans', sans-serif;
+    color: yellowgreen;
+    text-decoration: none;
+}
 header{
     background-color: #f05768;
     padding: 0.1vh;
@@ -21,31 +31,67 @@ header{
     font-size: 1.5em;
 }
 
+.description-titre {
+    font-family: 'Open Sans', sans-serif;
+    color: #00ccff;
+
+}
+
+.description-paragraphe {
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+}
 
 
-    .Titre-photo-milieu {
-        display: inline;
-        background-color: #f05768;
-        color: white;
-        font-family: 'Open Sans', sans-serif;
-        padding: 0.5vh;
-        position: absolute;
-        z-index: 1;
-        margin-top: 0px;
-        margin-left: 485px;
+.photo-milieu{
+    position: relative;
+    top: 10px;
+}
+
+.Titre-photo-milieu {
+    display: inline;
+    background-color: #f05768;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0.9vh;
+    position: absolute;
+    z-index: 1;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 0;
     }
     
-    .caméléon1 {
-        position: relative;
-        width: 805px;
-        height: 534px;
-        left: 53.9%;
+.caméléon1 {
+    position: relative;
+    width: 900px;
+    height: 470px;
+    left: 0%;
     }
-
-    .img_cameleon{
-        display: grid;
-        grid-row: 1 / span 2;
+    
+    
+.photo {
+    width: 620px;
+    padding: 0px;
+    position: relative;
+    top: 20px;
+    display: flex; 
     }
+    
+    
+.photo_cameleon{
+    width: 100px;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 4px;
+    grid-row-gap: 0px;
+    }
+    
+.photo1{
+    width: 260px;
+    }
+    
  
 .newsletter{
     border: 1px solid;
@@ -64,4 +110,10 @@ h3{
 
 span{
     text-decoration: underline;
+}
+
+.footer{
+    text-align: center;
+    color: #00ccff;
+    font-family: 'Open Sans', sans-serif;
 }
