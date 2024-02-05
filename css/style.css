@@ -1,0 +1,49 @@
+@import url(https://fonts.bunny.net/css?family=open-sans:300);
+
+
+body {
+    width: 900px;
+    background-color: #2f3848;
+    margin: auto;
+}
+
+header{
+    background-color: #f05768;
+    padding: 0.1vh;
+
+
+}
+
+.header-titre {
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+
+
+    .Titre-photo-milieu {
+        display: inline;
+        background-color: #f05768;
+        color: white;
+        font-family: 'Open Sans', sans-serif;
+        padding: 0.5vh;
+        position: absolute;
+        z-index: 1;
+        margin-top: 0px;
+        margin-left: 485px;
+    }
+    
+    .caméléon1 {
+        position: relative;
+        width: 805px;
+        height: 534px;
+        left: 53.9%;
+    }
+
+    .img_cameleon{
+        display: grid;
+        grid-row: 1 / span 2;
+    }
+ 
