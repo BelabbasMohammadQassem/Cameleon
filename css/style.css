@@ -47,3 +47,21 @@ header{
         grid-row: 1 / span 2;
     }
  
+.newsletter{
+    border: 1px solid;
+    background-color: #004488;
+    color: #9ACD32;
+    padding: 1em;
+    position: absolute;
+    right: 213px;
+    top: 58.5em;
+    width: 231px
+}
+
+h3{
+    color: #00CCFF;
+}
+
+span{
+    text-decoration: underline;
+}
