@@ -1,119 +1,102 @@
-@import url(https://fonts.bunny.net/css?family=open-sans:300);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- cette balise elle est obligatoire pour avoir un rendu correct sur les ecrans petits 
+  elle dit que notre contenu a la taille du device et faut pas dezoomer pour tout afficher le zoom est à 1 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>J'aime les caméléons</title>
 
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style-avec-grid.css">
 
-body {
-    width: 900px;
-    background-color: #2f3848;
-    margin: auto;
-}
+  <!-- on met une balise link qui va lier une image à la page pour l'afficher dans l'onglet du navigateur 
+  l'image doit etre carré : génralement 48px par 48px , ça peut etre un png, jpg, svg ou ico -->
+  <link rel="icon" href="../images/favicon.ico" />
+</head>
+<body>
 
-nav{
-    position: relative;
-    top: 10px;
-}
+  <div class="wrapper">
 
-a {
-    font-family: 'Open Sans', sans-serif;
-    color: yellowgreen;
-    text-decoration: none;
-}
-header{
-    background-color: #f05768;
-    padding: 0.1vh;
+    <header class="header">
 
+      <h1 class="header__title">J <span class="coeur">&#9829;</span> les caméléons !</h1>
 
-}
+      <nav class="nav">
 
-.header-titre {
-    font-family: 'Open Sans', sans-serif;
-    color: #fff;
-    text-align: center;
-    font-size: 1.5em;
-}
+        <ul class="nav__left">
+          <li><a href="#">About</a></li>
+          <li><a href="#">blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
 
-.description-titre {
-    font-family: 'Open Sans', sans-serif;
-    color: #00ccff;
+        <ul class="nav__right">
+          <li><a href="#"><img src="../images/facebook_icon.png" alt="Facebook"></a></li>
+          <li><a href="#"><img src="../images/twitter_icon.png" alt="Twitter"></a></li>
+        </ul>
 
-}
+      </nav>
 
-.description-paragraphe {
-    font-family: 'Open Sans', sans-serif;
-    color: #fff;
-}
+    </header>
 
+    <main>
+      <h2 class="main__title">Trop de cameleons ? Nope.</h2>
+      <p class="main__paragraph">Ici nous pensons qu'il n'y aura jamais trop de caméléons. Les caméléons, c'est mignon. Les caméléons, c'est pas con. Les caméléons, ça sent le bonbon. il est <a href="https://fr.wikipedia.org/wiki/Les_Cam%C3%A9l%C3%A9ons">prouvé scientifiquement</a> que regarder les caméléons tous les jours améliore la productivité et diminue le stress. Essayé !</p>
 
-.photo-milieu{
-    position: relative;
-    top: 10px;
-}
+      <!-- la balise figure englobe une img + figcaption qui sera la description de l'image -->
+      <figure class="cameleon-of-the-day">
+        <img class="cameleon-of-the-day__img" src="../images/cameleon-big.jpg" alt="cameleon of the day">
+        <figcaption class="cameleon-of-the-day__legend" >Le caméléon du jour &#9829;</figcaption>
+      </figure>
 
-.Titre-photo-milieu {
-    display: inline;
-    background-color: #f05768;
-    color: white;
-    font-family: 'Open Sans', sans-serif;
-    padding: 0.9vh;
-    position: absolute;
-    z-index: 1;
-    margin-top: 0px;
-    margin-left: 0px;
-    margin-bottom: 0;
-    }
-    
-.caméléon1 {
-    position: relative;
-    width: 900px;
-    height: 470px;
-    left: 0%;
-    }
-    
-    
-.photo {
-    width: 620px;
-    padding: 0px;
-    position: relative;
-    top: 20px;
-    display: flex; 
-    }
-    
-    
-.photo_cameleon{
-    width: 100px;
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 4px;
-    grid-row-gap: 0px;
-    }
-    
-.photo1{
-    width: 260px;
-    }
-    
- 
-.newsletter{
-    border: 1px solid;
-    background-color: #004488;
-    color: #9ACD32;
-    padding: 1em;
-    position: absolute;
-    right: 213px;
-    top: 58.5em;
-    width: 231px
-}
+      <div class="gallery">
 
-h3{
-    color: #00CCFF;
-}
+        <div class="gallery-images">
+          <!-- 
+          raccourci Emlmet pour generer plusieurs balises avec le signe *
+          et le signe $$ qui sera remplacé par les numéro de balise
+          img[src="../images/cameleon$$.jpg" alt="Caméléon $$"]*20 
+          -->
+          <img src="../images/cameleon01.jpg" alt="Caméléon 01">
+          <img src="../images/cameleon02.jpg" alt="Caméléon 02">
+          <img src="../images/cameleon03.jpg" alt="Caméléon 03">
+          <img src="../images/cameleon04.jpg" alt="Caméléon 04">
+          <img src="../images/cameleon05.jpg" alt="Caméléon 05">
+          <img src="../images/cameleon06.jpg" alt="Caméléon 06">
+          <img src="../images/cameleon07.jpg" alt="Caméléon 07">
+          <img src="../images/cameleon08.jpg" alt="Caméléon 08">
+          <img src="../images/cameleon09.jpg" alt="Caméléon 09">
+          <img src="../images/cameleon10.jpg" alt="Caméléon 10">
+          <img src="../images/cameleon11.jpg" alt="Caméléon 11">
+          <img src="../images/cameleon12.jpg" alt="Caméléon 12">
+          <img src="../images/cameleon13.jpg" alt="Caméléon 13">
+          <img src="../images/cameleon14.jpg" alt="Caméléon 14">
+          <img src="../images/cameleon15.jpg" alt="Caméléon 15">
+          <img src="../images/cameleon16.jpg" alt="Caméléon 16">
+          <img src="../images/cameleon17.jpg" alt="Caméléon 17">
+          <img src="../images/cameleon18.jpg" alt="Caméléon 18">
+          <img src="../images/cameleon19.jpg" alt="Caméléon 19">
+          <img src="../images/cameleon20.jpg" alt="Caméléon 20">
+        </div>
 
-span{
-    text-decoration: underline;
-}
+        <aside class="gallery-aside">
+          <h3>Soumettez vos photos de cameleons!</h3>
+          <p>Vous avez trouvé une photo de cameleon tellement mignonne que vous voulez la partager ? <a href="#">Partagez là ici!</a></p>
 
-.footer{
-    text-align: center;
-    color: #00ccff;
-    font-family: 'Open Sans', sans-serif;
-}
+          <h3>Inscrivez vous à notre newsletter!</h3>
+          <p><a href="#">Souscrivez ici.</a></p>
+        </aside>
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <!-- raccourci mac pour le pipe : Option + maj + L
+      raccourcis window : altGr + 6 -->
+      <p>Copyright &#169; 2024 | &#9829; Caméléons</p>
+    </footer>
+
+  </div>
+  
+</body>
+</html>

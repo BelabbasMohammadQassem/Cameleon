@@ -1,80 +1,102 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="icon" href="../images/favicon.ico">
-    <title>Caméléon</title>
+  <meta charset="UTF-8">
+  <!-- cette balise elle est obligatoire pour avoir un rendu correct sur les ecrans petits 
+  elle dit que notre contenu a la taille du device et faut pas dezoomer pour tout afficher le zoom est à 1 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>J'aime les caméléons</title>
+
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style-avec-grid.css">
+
+  <!-- on met une balise link qui va lier une image à la page pour l'afficher dans l'onglet du navigateur 
+  l'image doit etre carré : génralement 48px par 48px , ça peut etre un png, jpg, svg ou ico -->
+  <link rel="icon" href="../images/favicon.ico" />
 </head>
 <body>
-  <section>
-    <body>
-        <section>
-            <header class="header">
-            <h1 class="header-titre">J♡ les caméléons !</h1>
-            </header>
-    
-            <nav class="nav">
-                <a href="#">About</a>
-                <a href="#">Blog</a>
-                <a href="#">Contact</a>
-            </nav>
-    
-        </section>
-    
-        <section class="description">
-            <h2 class="description-titre">Trop de caméléons ? nope.</h2>
-            <p class="description-paragraphe">Ici nous pensons qu'il n'y aura jamais trop de caméléons. Les caméleons, c'est mignon. Les caméléons, c'est pas con. 
-            Les caméléons, ça sent les bon. il est prouvé scientifiquement que regarder les caméléons tout les jours améliore la productivité et diminue le stress. Essayez !</p>
-        </section>
 
-<section class="photo-milieu">
-    <p class="Titre-photo-milieu">LE CAMÉLÉON DE LA SEMAINE ♡</p>
-    <img class="caméléon1" src="../images/cameleon-big.jpg" alt="">
-</section>
-</section>
- 
+  <div class="wrapper">
 
+    <header class="header">
 
-<section>
-    <article class="image_cameleon">
-        <div class="img_cameleon">
-<img src="../images/cameleon01.jpg" alt=""></div>
-<img src="../images/cameleon02.jpg" alt="">
-<img src="../images/cameleon03.jpg" alt="">
-<img src="../images/cameleon04.jpg" alt="">
-<img src="../images/cameleon05.jpg" alt="">
-<img src="../images/cameleon06.jpg" alt="">
-<img src="../images/cameleon07.jpg" alt="">
-<img src="../images/cameleon08.jpg" alt="">
-<img src="../images/cameleon09.jpg" alt="">
-<img src="../images/cameleon10.jpg.jpg" alt="">
-<img src="../images/cameleon11.jpg" alt="">
-<img src="../images/cameleon12.jpg" alt="">
-<img src="../images/cameleon13.jpg" alt="">
-<img src="../images/cameleon14.jpg" alt="">
-<img src="../images/cameleon15.jpg" alt="">
-<img src="../images/cameleon16.jpg" alt="">
-<img src="../images/cameleon17.jpg" alt="">
-<img src="../images/cameleon18.jpg" alt="">
-<img src="../images/cameleon19.jpg" alt="">
-<img src="../images/cameleon20.jpg" alt="">
-<img src="../images/cameleon21.jpg.jpg" alt="">
-</article>
-  </section>
-  <section>
-    <article class="newsletter">
-       <h3>SOUMETTEZ VOS PHOTOS DE CAMELEONS</h3>
-       <hr>
-        <p>Vous avez trouvé une photo de caméléon tellement mignonne que vous voulez la partager?</p>
-        <p><span>Partagez là ici!</span></p>
-        <h3>INSCRIVEZ VOUS À NOTRE NEWSLETTER!</h3>
-        <hr>
-        <p><span>Souscrivez ici.</span></p>
-    </article>
-  </section>
+      <h1 class="header__title">J <span class="coeur">&#9829;</span> les caméléons !</h1>
 
-  <footer class="footer">Copyright &#169; 2017 | ♡ Caméléons</footer>
+      <nav class="nav">
+
+        <ul class="nav__left">
+          <li><a href="#">About</a></li>
+          <li><a href="#">blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+
+        <ul class="nav__right">
+          <li><a href="#"><img src="../images/facebook_icon.png" alt="Facebook"></a></li>
+          <li><a href="#"><img src="../images/twitter_icon.png" alt="Twitter"></a></li>
+        </ul>
+
+      </nav>
+
+    </header>
+
+    <main>
+      <h2 class="main__title">Trop de cameleons ? Nope.</h2>
+      <p class="main__paragraph">Ici nous pensons qu'il n'y aura jamais trop de caméléons. Les caméléons, c'est mignon. Les caméléons, c'est pas con. Les caméléons, ça sent le bonbon. il est <a href="https://fr.wikipedia.org/wiki/Les_Cam%C3%A9l%C3%A9ons">prouvé scientifiquement</a> que regarder les caméléons tous les jours améliore la productivité et diminue le stress. Essayé !</p>
+
+      <!-- la balise figure englobe une img + figcaption qui sera la description de l'image -->
+      <figure class="cameleon-of-the-day">
+        <img class="cameleon-of-the-day__img" src="../images/cameleon-big.jpg" alt="cameleon of the day">
+        <figcaption class="cameleon-of-the-day__legend" >Le caméléon du jour &#9829;</figcaption>
+      </figure>
+
+      <div class="gallery">
+
+        <div class="gallery-images">
+          <!-- 
+          raccourci Emlmet pour generer plusieurs balises avec le signe *
+          et le signe $$ qui sera remplacé par les numéro de balise
+          img[src="../images/cameleon$$.jpg" alt="Caméléon $$"]*20 
+          -->
+          <img src="../images/cameleon01.jpg" alt="Caméléon 01">
+          <img src="../images/cameleon02.jpg" alt="Caméléon 02">
+          <img src="../images/cameleon03.jpg" alt="Caméléon 03">
+          <img src="../images/cameleon04.jpg" alt="Caméléon 04">
+          <img src="../images/cameleon05.jpg" alt="Caméléon 05">
+          <img src="../images/cameleon06.jpg" alt="Caméléon 06">
+          <img src="../images/cameleon07.jpg" alt="Caméléon 07">
+          <img src="../images/cameleon08.jpg" alt="Caméléon 08">
+          <img src="../images/cameleon09.jpg" alt="Caméléon 09">
+          <img src="../images/cameleon10.jpg" alt="Caméléon 10">
+          <img src="../images/cameleon11.jpg" alt="Caméléon 11">
+          <img src="../images/cameleon12.jpg" alt="Caméléon 12">
+          <img src="../images/cameleon13.jpg" alt="Caméléon 13">
+          <img src="../images/cameleon14.jpg" alt="Caméléon 14">
+          <img src="../images/cameleon15.jpg" alt="Caméléon 15">
+          <img src="../images/cameleon16.jpg" alt="Caméléon 16">
+          <img src="../images/cameleon17.jpg" alt="Caméléon 17">
+          <img src="../images/cameleon18.jpg" alt="Caméléon 18">
+          <img src="../images/cameleon19.jpg" alt="Caméléon 19">
+          <img src="../images/cameleon20.jpg" alt="Caméléon 20">
+        </div>
+
+        <aside class="gallery-aside">
+          <h3>Soumettez vos photos de cameleons!</h3>
+          <p>Vous avez trouvé une photo de cameleon tellement mignonne que vous voulez la partager ? <a href="#">Partagez là ici!</a></p>
+
+          <h3>Inscrivez vous à notre newsletter!</h3>
+          <p><a href="#">Souscrivez ici.</a></p>
+        </aside>
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <!-- raccourci mac pour le pipe : Option + maj + L
+      raccourcis window : altGr + 6 -->
+      <p>Copyright &#169; 2024 | &#9829; Caméléons</p>
+    </footer>
+
+  </div>
+  
 </body>
 </html>
